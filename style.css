@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dark-Blue-l: hsl(213, 19%, 22%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--Very-Dark-Blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon img {
+  height: 36px;
+  padding: 10px;
+  background-color: var(--Dark-Blue-l);
+  border-radius: 50%;
+}
+
+.hidden {
+  display: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 325px;
+  background-color: var(--Dark-Blue);
+  padding: 25px;
+  border-radius: 1rem;
+}
+.card-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 325px;
+  background-color: var(--Dark-Blue);
+  padding: 25px;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 15px;
+}
+
+h1 {
+  color: var(--White);
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.card p {
+  color: var(--Medium-Grey);
+  line-height: 1.5;
+  font-size: 14px;
+  font-weight: 400;
+}
+.card-2 p {
+  color: var(--Medium-Grey);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.level {
+  display: flex;
+  justify-content: center;
+  background-color: var(--Dark-Blue-l);
+  color: var(--Orange);
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.stats input {
+  appearance: none;
+  outline: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: var(--Dark-Blue-l);
+  color: var(--Light-Grey);
+  font-size: 14px;
+  transition: all 100ms linear;
+}
+
+.stats input:hover {
+  background-color: var(--Orange);
+}
+
+.stats input:checked {
+  background-color: var(--Light-Grey);
+  color: #fff;
+  box-shadow: 0 1px 1px #0000002e;
+  text-shadow: 0 1px 0px #79485f7a;
+}
+
+.stats input:before {
+  content: attr(label);
+  display: block;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--Orange);
+  border: none;
+  border-radius: 2rem;
+  padding: 14px;
+  color: #fff;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+button:hover {
+  background-color: var(--White);
+  color: var(--Orange);
+}
+
+.hidden {
+  display: none;
+}
+@media (min-width: 475px) {
+  .card {
+    max-width: 410px;
+    padding: 30px;
+    border-radius: 2rem;
+  }
+  .card-2 {
+    max-width: 410px;
+    padding: 50px 25px;
+    border-radius: 2rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 500;
+  }
+  .card-p {
+    font-size: 1rem;
+  }
+  .card-2-p {
+    font-size: 1rem;
+  }
+  .stats input {
+    padding: 15px 20px;
+  }
+}
+
+/* .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */
